@@ -1,0 +1,138 @@
+.product {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+.product__photo {
+  height: 200px;
+  width: 200px;
+  margin-top: 40px;
+}
+
+.product__wrapper {
+  height: 450px;
+  width: 32%;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  background: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  min-width: 314px;
+  margin-top: 20px;
+
+  @media (max-width: 425px) {
+    margin: 12px auto;
+  }
+
+}
+
+.product__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__title {
+  width: 220px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.product__price-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 14px;
+}
+
+.product__old-price {
+  font-size: 18px;
+  line-height: 25px;
+  color: #696969;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  margin-right: 10px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background: #636363;
+    top: 12px;
+    left: -6px;
+    width: 59px;
+    height: 1px;
+  }
+}
+
+.product__new-price {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 41px;
+  color: #00A54D;
+  margin: 0;
+}
+
+.product__count {
+  background: #ECECEC;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  width: 110px;
+  align-items: center;
+}
+
+.product__button-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.product__btn {
+  background: #ECECEC;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #00A54D;
+}
+
+.product__value {
+  margin: 0;
+  color: #00A54D;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 14px 0;
+
+}
+
+.product__cart {
+  padding: 14px 45px;
+  background: #00A54D;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  margin-left: 15px;
+
+  &:active {
+    background: #0C8343;
+  }
+  &:hover {
+    background: #0C8343;
+  }
+}

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ашаан</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+  <section class='header'>
+    <div class='container'>
+      <div class='header__wrapper'>
+
+        <div class='header__city'>
+          <p class='header__button'>Ваш город: <span>Тюмень</span></p>
+        </div>
+
+        <ul class='header__list'>
+          <li class='header__item'>
+            <a class='header__link' href="#">
+              О компании
+            </a>
+          </li>
+          <li class='header__item'>
+            <a class='header__link' href="#">
+              Наши магазины
+            </a>
+          </li>
+          <li class='header__item'>
+            <a class='header__link' href="#">
+              Работа у нас
+            </a>
+          </li>
+        </ul>
+
+        <a href="tel:788007005800" class='header__phone'>8 (800) 700-58-00</a>
+      </div>
+    </div>
+  </section>
+
+  <section class='second-header'>
+    <div class="container">
+      <div class="second-header__wrapper">
+        <button class='second-header__burger'><span></span></button>
+        <img class='second-header__logo' src='images/header_logo.png' alt="Логотип Ашан">
+        <ul class='second-header__list'>
+          <li class='second-header__item second-header__item--qa'>
+            <a href='#' class='second-header__link'>
+              Вопросы и<br>ответы
+            </a>
+          </li>
+          <li class='second-header__item second-header__item--login'>
+            <a href='#' class='second-header__link'>
+              Вход/<br>Регистрация
+            </a>
+          </li>
+          <li class='second-header__item second-header__item--cart'>
+            <a href='#' class='second-header__link'>
+              Корзина<br><span class='total-price'>0 руб.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class='third-header'>
+    <div class='container'>
+      <div class="third-header__wrapper">
+        <div class='third-header__catalog'>
+          <button class='third-header__burger'><span></span></button>
+          <p class='third-header__text'>Каталог товаров</p>
+        </div>
+
+        <div class='third-header__seacrh'>
+          <svg class='third-header__search-input--icon' width="22" height="23" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21.666 20.95l-5.424-5.694a9.308 9.308 0 002.159-5.97C18.4 4.166 14.273 0 9.2 0 4.126 0 0 4.166 0 9.286c0 5.12 4.127 9.287 9.2 9.287 1.905 0 3.72-.58 5.271-1.68l5.465 5.736c.228.239.535.371.865.371.311 0 .607-.12.831-.338a1.22 1.22 0 00.034-1.713zM9.2 2.422c3.75 0 6.8 3.078 6.8 6.863 0 3.785-3.05 6.864-6.8 6.864S2.4 13.07 2.4 9.285c0-3.785 3.05-6.864 6.8-6.864z"
+              fill="#606060"/>
+          </svg>
+          <input class='third-header__search-input' type='text' placeholder="Что вы хотите найти?">
+          <button class='third-header__button' type='button'>Найти</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main class='page-main'>
+  <section class='breadcrumbs'>
+    <div class='container'>
+      <ul class='breadcrumbs__list'>
+        <li class='breadcrumbs__item'>
+          <a href="#" class='breadcrumbs__link'>
+            Главная
+          </a>
+        </li>
+        <li class='breadcrumbs__item'>
+          <a href="#" class='breadcrumbs__link'>
+            Продукты
+          </a>
+        </li>
+        <li class='breadcrumbs__item'>
+          <a href="#" class='breadcrumbs__link breadcrumbs__link--active'>
+            Новинки
+          </a>
+        </li>
+      </ul>
+      <h2 class='page-main__title'>Новинки продуктов</h2>
+    </div>
+  </section>
+
+
+  <section class='content-block'>
+    <div class="container">
+      <div class="content-block__wrapper">
+        <aside class='content-block__left-block'>
+          <!-- Tablet-mobile-->
+          <div class='content-block__mobile'>
+            <div class='tab'>
+              <input class='tab__input ' id="tab-four" type='checkbox' name='tabs'>
+              <label class='tab__label tab__label--tablet ' for="tab-four">Фильтры</label>
+              <div class='tab__content tab__content--tablet '>
+                <div class='tab'>
+                  <input class='tab__input' id="tab-one" type='checkbox' name='tabs'>
+                  <label for="tab-one" class='tab__label tab__label--first'>Цена</label>
+                  <div class='tab__content tab__content--first'>
+                    <div class='tab__slider' id="slider"></div>
+                    <div class='tab__value'>
+                      <label>
+                        <input class='tab__value0' type='text' id='input0'>
+                      </label>
+                      <label>
+                        <input class='tab__value1' type='text' id='input1'>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class='tab'>
+                  <input class='tab__input' id="tab-two" type='checkbox' name='tabs'>
+                  <label for="tab-two" class='tab__label tab__label--second'>Бренд</label>
+                  <div class='tab__content tab__content--second'>
+                    <ul class="tabs__list">
+                      <li class="tabs__item">
+                        <input class="tabs__checkbox" type="checkbox" id="test">
+                        <label class="tabs__name" for="test">Alpen Gold (2)</label>
+                      </li>
+                      <li class="tabs__item">
+                        <input class="tabs__checkbox" type="checkbox" id="asd">
+                        <label class="tabs__name" for="asd">Casa Dolcini (1)</label>
+                      </li>
+                      <li class="tabs__item">
+                        <input class="tabs__checkbox" type="checkbox" id="123">
+                        <label class="tabs__name" for="123">Santa Maria (2)</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+
+                <div class='tab'>
+                  <input class='tab__input' id="tab-three" type='checkbox' name='tabs'>
+                  <label for="tab-three" class='tab__label tab__label--third'>Особенность</label>
+                  <div class='tab__content tab__content--third'>
+                    <ul class="tabs__list">
+                      <li class="tabs__item">
+                        <input class="tabs__checkbox" type="checkbox" id="bez">
+                        <label class="tabs__name" for="bez">C арахисом</label>
+                      </li>
+                      <li class="tabs__item">
+                        <input class="tabs__checkbox" type="checkbox" id="with">
+                        <label class="tabs__name" for="with">Без арахиса</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- Tablet-mobile-->
+
+          <!--Desktop-->
+          <div class="content-block__desktop">
+            <div class='tab'>
+              <input class='tab__input' id="tab-one-desk" type='checkbox' name='tabs'>
+              <label for="tab-one-desk" class='tab__label tab__label--first'>Цена</label>
+              <div class='tab__content tab__content--first'>
+                <div class='tab__slider' id="slider-test"></div>
+                <div class='tab__value'>
+                  <label>
+                    <input class='tab__value0' type='text' id='input2'>
+                  </label>
+                  <label>
+                    <input class='tab__value1' type='text' id='input3'>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+
+            <div class='tab'>
+              <input class='tab__input' id="tab-two-desktop" type='checkbox' name='tabs'>
+              <label for="tab-two-desktop" class='tab__label tab__label--second'>Бренд</label>
+              <div class='tab__content tab__content--second'>
+                <ul class="tabs__list">
+                  <li class="tabs__item">
+                    <input class="tabs__checkbox" type="checkbox" id="Alpengold1">
+                    <label class="tabs__name" for="Alpengold1">Alpen Gold (2)</label>
+                  </li>
+                  <li class="tabs__item">
+                    <input class="tabs__checkbox" type="checkbox" id="Casa1">
+                    <label class="tabs__name" for="Casa1">Casa Dolcini (1)</label>
+                  </li>
+                  <li class="tabs__item">
+                    <input class="tabs__checkbox" type="checkbox" id="Santa1">
+                    <label class="tabs__name" for="Santa1">Santa Maria (2)</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class='tab'>
+              <input class='tab__input' id="tab-three-desktop" type='checkbox' name='tabs'>
+              <label for="tab-three-desktop" class='tab__label tab__label--third'>Особенность</label>
+              <div class='tab__content tab__content--third'>
+                <ul class="tabs__list">
+                  <li class="tabs__item">
+                    <input class="tabs__checkbox" type="checkbox" id="with-peanut">
+                    <label class="tabs__name" for="with-peanut">C арахисом</label>
+                  </li>
+                  <li class="tabs__item">
+                    <input class="tabs__checkbox" type="checkbox" id="no-peanut">
+                    <label class="tabs__name" for="no-peanut">Без арахиса</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!--Desktop-->
+
+
+        <div class="content-block__right-block">
+          <div class="sort-block">
+            <div>
+              <ul class="sort-block__list">
+                <li class="sort-block__item sort-block__item--first">
+                  <a class="sort-block__link">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="33" height="33" rx="3" fill="#ECECEC"/>
+                      <rect x="9" y="8" width="4" height="4" fill="#00A54D"/>
+                      <rect x="15" y="8" width="4" height="4" fill="#00A54D"/>
+                      <rect x="21" y="8" width="4" height="4" fill="#00A54D"/>
+                      <rect x="21" y="14" width="4" height="4" fill="#00A54D"/>
+                      <rect x="15" y="14" width="4" height="4" fill="#00A54D"/>
+                      <rect x="9" y="14" width="4" height="4" fill="#00A54D"/>
+                      <rect x="21" y="20" width="4" height="4" fill="#00A54D"/>
+                      <rect x="15" y="20" width="4" height="4" fill="#00A54D"/>
+                      <rect x="9" y="20" width="4" height="4" fill="#00A54D"/>
+                    </svg>
+
+                  </a>
+                </li>
+                <li class="sort-block__item sort-block__item--second">
+                  <a class="sort-block__link">
+                    <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="6" y="1" width="18" height="2" fill="#C4C4C4"/>
+                      <rect width="4" height="4" fill="#C4C4C4"/>
+                      <rect x="6" y="7" width="18" height="2" fill="#C4C4C4"/>
+                      <rect y="6" width="4" height="4" fill="#C4C4C4"/>
+                      <rect x="6" y="13" width="18" height="2" fill="#C4C4C4"/>
+                      <rect y="12" width="4" height="4" fill="#C4C4C4"/>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="sort-block__item sort-block__item--discount">
+                  <input class="sort-block__checkbox" type="checkbox" id="discount">
+                  <label for="discount" class="sort-block__name">Цена со скидкой</label>
+                </li>
+              </ul>
+            </div>
+
+
+            <div class="sort-block__content sort-block__content--margin">
+              <p class="sort-block__title">Товаров на странице</p>
+              <div class="sort-block__wrapper">
+                <button class="btn_wrapper drop_btn">
+                  <span class="main">6</span>
+                  <svg class="select_img arrow_img" width="9" height="5" viewBox="0 0 9 5" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4.5 4L8 1" stroke="#00A54D"/>
+                  </svg>
+                </button>
+                <div class="select_content main_content">
+                  <span class="list_button list_button--number">6</span>
+                  <span class="list_button list_button--number">12</span>
+                  <span class="list_button list_button--number">18</span>
+                  <span class="list_button list_button--number">24</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort-block__content">
+              <p class="sort-block__title">Сотрировать по</p>
+              <div class="sort-block__wrapper">
+                <button class="btn_wrapper btn_wrapper--sort drop_btn">
+                  <span class="main">популярности</span>
+                  <svg class="select_img arrow_img" width="9" height="5" viewBox="0 0 9 5" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4.5 4L8 1" stroke="#00A54D"/>
+                  </svg>
+                </button>
+                <div class="select_content select_content--sort main_content">
+                  <span class="list_button list_button--sort">популярности</span>
+                  <span class="list_button list_button--sort">названию А-Я</span>
+                  <span class="list_button list_button--sort">названия Я-А</span>
+                  <span class="list_button list_button--sort">возрастанию цены</span>
+                  <span class="list_button list_button--sort">убыванию цены</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <ul class="product">
+            <li class="product__wrapper">
+              <article class="product__article">
+                <img class="product__photo" src="images/paprika.png" alt="Парика">
+                <p class="product__title">Копченая паприка Santa Maria, 230г</p>
+                <div class="product__price-wrapper">
+                  <p class="product__old-price">643 p.</p>
+                  <p class="product__new-price">449 p.</p>
+                </div>
+
+                <div class="product__button-wrapper">
+                  <div class="product__count">
+                    <button class="product__btn product__btn--plus" onClick="onClick2(1);">-</button>
+                    <p class="product__value"><a id="clicks1">1</a></p>
+                    <button class="product__btn product__btn--minus" onClick="onClick(1);">+</button>
+                  </div>
+
+                  <a href="#" class="product__cart">В корзину</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="product__wrapper">
+              <article class="product__article">
+                <img class="product__photo" src="images/fruzhe.png" alt="Конфеты Фруже">
+                <p class="product__title">Конфеты «Фруже», абрикос с миндалём в белом шоколаде, 220г</p>
+                <div class="product__price-wrapper">
+                  <p class="product__new-price">149 p.</p>
+                </div>
+
+                <div class="product__button-wrapper">
+                  <div class="product__count">
+                    <button class="product__btn product__btn--plus">-</button>
+                    <p class="product__value">1</p>
+                    <button class="product__btn product__btn--minus">+</button>
+                  </div>
+
+                  <a href="#" class="product__cart">В корзину</a>
+                </div>
+              </article>
+
+            </li>
+
+            <li class="product__wrapper">
+              <article class="product__article">
+                <img class="product__photo" src="images/coockie.png" alt="Печенье бисквитное">
+                <p class="product__title">Печенье бисквитное Casa Dolcini Lady Fingers, 200г</p>
+                <div class="product__price-wrapper">
+                  <p class="product__new-price">213 p.</p>
+                </div>
+
+                <div class="product__button-wrapper">
+                  <div class="product__count">
+                    <button class="product__btn product__btn--plus ">-</button>
+                    <p class="product__value">1</p>
+                    <button class="product__btn product__btn--minus">+</button>
+                  </div>
+
+                  <a href="#" class="product__cart">В корзину</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="product__wrapper">
+              <article class="product__article">
+                <img class="product__photo" src="images/alpengold.png" alt="Шоколад молочный Alpen Gold">
+                <p class="product__title">Шоколад молочный Alpen Gold Max Fun, 160г</p>
+                <div class="product__price-wrapper">
+                  <p class="product__old-price">147 p.</p>
+                  <p class="product__new-price">120 p.</p>
+                </div>
+
+                <div class="product__button-wrapper">
+                  <div class="product__count">
+                    <button class="product__btn product__btn--plus ">-</button>
+                    <p class="product__value">1</p>
+                    <button class="product__btn product__btn--minus">+</button>
+                  </div>
+
+                  <a href="#" class="product__cart">В корзину</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="product__wrapper">
+              <article class="product__article">
+                <img class="product__photo" src="images/alpengold2.png" alt="Шоколад молочный Alpen Gold">
+                <p class="product__title">
+                  Шоколад молочный Alpen Gold Max Fun, 160г</p>
+                <div class="product__price-wrapper">
+                  <p class="product__new-price">147 p.</p>
+                </div>
+
+                <div class="product__button-wrapper">
+                  <div class="product__count">
+                    <button class="product__btn product__btn--plus ">-</button>
+                    <p class="product__value">1</p>
+                    <button class="product__btn product__btn--minus">+</button>
+                  </div>
+
+                  <a href="#" class="product__cart">В корзину</a>
+                </div>
+              </article>
+            </li>
+
+            <li class="product__wrapper">
+              <article class="product__article">
+                <img class="product__photo" src="images/grass.png" alt="Прованские травы Santa">
+                <p class="product__title">Прованские травы Santa Maria, 6г</p>
+                <div class="product__price-wrapper">
+                  <p class="product__new-price">39 p.</p>
+                </div>
+
+                <div class="product__button-wrapper">
+                  <div class="product__count">
+                    <button class="product__btn product__btn--plus ">-</button>
+                    <p class="product__value">1</p>
+                    <button class="product__btn product__btn--minus">+</button>
+                  </div>
+
+                  <a href="#" class="product__cart">В корзину</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+
+          <div class="footer__wrapper">
+            <ul class="page__list">
+              <li class="page__item">
+                <a href="#" class="page__link">
+                  <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.21928 0.16544C5.44484 -0.0551466 5.79995 -0.0551466 6.02551 0.16544C6.24345 0.378574 6.24345 0.7333 6.02551 0.945937L1.93747 4.94382L15.4275 4.94382C15.7419 4.94382 16 5.18825 16 5.49578C16 5.80331 15.7419 6.05569 15.4275 6.05569L1.93747 6.05569L6.02551 10.0461C6.24345 10.2667 6.24345 10.6219 6.02551 10.8346C5.79995 11.0551 5.44484 11.0551 5.21928 10.8346L0.163456 5.89025C-0.0544853 5.67711 -0.0544853 5.32239 0.163456 5.10975L5.21928 0.16544Z"
+                      fill="#606060"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="page__item">
+                <a href="#" class="page__link page__link--active">1</a>
+              </li>
+              <li class="page__item">
+                <a href="#" class="page__link">2</a>
+              </li>
+              <li class="page__item">
+                <a href="#" class="page__link">3</a>
+              </li>
+              <li class="page__item page__item--bald">
+                <a href="#" class="page__link">4</a>
+              </li>
+              <li class="page__item">
+                <a href="#" class="page__link">...</a>
+              </li>
+              <li class="page__item">
+                <a href="#" class="page__link">60</a>
+              </li>
+              <li class="page__item">
+                <a href="#" class="page__link">
+                  <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.7807 10.8346C10.5552 11.0551 10.2 11.0551 9.97449 10.8346C9.75655 10.6214 9.75655 10.2667 9.97449 10.0541L14.0625 6.05618L0.57254 6.05619C0.258074 6.05619 5.00103e-07 5.81175 4.73218e-07 5.50422C4.46333e-07 5.19669 0.258074 4.94431 0.57254 4.94431L14.0625 4.94431L9.97449 0.953887C9.75655 0.7333 9.75655 0.378077 9.97449 0.165439C10.2 -0.0551467 10.5552 -0.0551467 10.7807 0.165439L15.8365 5.10975C16.0545 5.32288 16.0545 5.67761 15.8365 5.89025L10.7807 10.8346Z"
+                      fill="#00A54D"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="sort-block__content sort-block__content--footer">
+              <p class="sort-block__title">Сотрировать по</p>
+              <div class="sort-block__wrapper">
+                <button class="btn_wrapper btn_wrapper--sort drop_btn">
+                  <span class="main">популярности</span>
+                  <svg class="select_img arrow_img" width="9" height="5" viewBox="0 0 9 5" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4.5 4L8 1" stroke="#00A54D"/>
+                  </svg>
+                </button>
+                <div class="select_content select_content--sort main_content">
+                  <span class="list_button list_button--sort">популярности</span>
+                  <span class="list_button list_button--sort">названию А-Я</span>
+                  <span class="list_button list_button--sort">названия Я-А</span>
+                  <span class="list_button list_button--sort">возрастанию цены</span>
+                  <span class="list_button list_button--sort">убыванию цены</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<script src='js/nouislider.min.js'></script>
+<script src='js/apps.js'></script>
+</body>
+</html>

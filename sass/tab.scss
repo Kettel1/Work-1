@@ -1,0 +1,230 @@
+.tab {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+
+  .tab__input:checked ~ .tab__content {
+    &--first {
+      max-height: 100px;
+    }
+
+    &--second {
+      max-height: 100px;
+    }
+
+    &--third {
+      max-height: 80px;
+    }
+
+    &--tablet {
+      max-height: 1030px;
+    }
+  }
+}
+
+.tab__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab__label {
+
+  &--second {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      background: #C4C4C4;
+      width: 95%;
+      height: 1px;
+      z-index: 1000;
+      content: "";
+      top: 0;
+    }
+  }
+
+  &--third {
+    &::before {
+      position: absolute;
+      background: #C4C4C4;
+      width: 95%;
+      height: 1px;
+      z-index: 1000;
+      content: "";
+      top: 0;
+    }
+  }
+}
+
+.tab__label {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #ececec;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+  color: black;
+  font-size: 13px;
+
+  &--tablet {
+    color: #606060;
+    font-size: 16px;
+    font-weight: normal;
+
+    @media (max-width: 768px) {
+      line-height: 2;
+    }
+  }
+
+
+}
+
+
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  background: #ececec;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+  height: 450px;
+  position: relative;
+}
+
+.tab__input[type="checkbox"] {
+  & + .tab__label::after {
+    content: "Развернуть";
+    color: $main-color;
+    height: 35px;
+    width: 105px;
+    background-image: url(../images/expand.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+  }
+
+  & + .tab__label--tablet::after {
+    color: #606060;
+  }
+}
+
+.tab__input[type="checkbox"]:checked + .tab__label::after {
+  content: "Свернуть";
+  height: 35px;
+  width: 105px;
+  background-image: url(../images/rollup.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  right: 10px;
+  top: 10px;
+  position: absolute;
+}
+
+
+.tab__slider {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-bottom: 15px;
+  width: 90%
+}
+
+.tab__value {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab__value0, .tab__value1 {
+  width: 60px;
+  border-radius: 30px;
+  border: 1px solid $main-color;
+  height: 25px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.tabs__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.tab__value0 {
+  margin-left: 10px;
+}
+
+.tab__value1 {
+  margin-right: 10px;
+}
+
+.tabs__checkbox {
+  opacity: 0;
+}
+
+.tabs__name {
+  padding-left: 25px;
+  padding-top: 5px;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 14px;
+  color: #606060;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/checkbox-off.svg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    top: 3px;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-image: url(../images/checkbox-on.svg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 4px;
+    left: 0;
+    top: 3px;
+    cursor: pointer;
+  }
+}
+
+.tabs__item {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 5px;
+  list-style: none;
+  position: relative;
+}
+
+.tabs__item .tabs__checkbox[type="checkbox"] + .tabs__name::after {
+  content: none;
+}
+
+.tabs__item .tabs__checkbox[type="checkbox"]:checked + .tabs__name::before {
+  background-image: none;
+}
+
+.tabs__item .tabs__checkbox[type="checkbox"]:checked + .tabs__name::after {
+  content: "";
+}
